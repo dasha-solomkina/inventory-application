@@ -10,11 +10,9 @@
     <header><h1>Habitats</h1></header>
 
     <nav>
-      <a href="/new">
+      <a href="/new-habitat"> <button>new habitat</button> </a
+      ><a href="/new">
         <button>new creature</button>
-      </a>
-      <a href="/new-habitat">
-        <button>new habitat</button>
       </a>
     </nav>
 
@@ -24,11 +22,12 @@
       <div class="card habitat">
         <img src="<%= habitat.img  %>" alt="<%= habitat.habitat_name %>" />
         <a href="/<%= habitat.id  %>"><h2><%= habitat.habitat_name %></h2></a>
-        <p><%= habitat.superpower %></p>
+        <p class="superpower"><%= habitat.superpower %></p>
         <form
           action="/<%= habitat.id %>/delete"
           method="POST"
           style="display: inline"
+          class="delete"
         >
           <button
             type="submit"

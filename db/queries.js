@@ -45,7 +45,7 @@ async function insertNewCreature({
   const defaultMaxWeight = max_weight || 200
   const defaultLifespan = lifespan || 100
   const defaultImg =
-    image || 'https://mythology.net/wp-content/uploads/2017/03/Dragon-Art.jpg'
+    img || 'https://mythology.net/wp-content/uploads/2017/03/Dragon-Art.jpg'
 
   const values = [
     name,
@@ -55,20 +55,20 @@ async function insertNewCreature({
     defaultMaxWeight,
     defaultLifespan,
     habitat_id,
-    defaultImg,
+    img,
   ]
 
   await pool.query(query, values)
 }
 
-async function insertNewHabitat({ habitat_name, superpower, image }) {
+async function insertNewHabitat({ habitat_name, superpower, img }) {
   const query = `
     INSERT INTO habitats 
     (habitat_name, superpower, img) 
     VALUES ($1, $2, $3)
   `
   const defaultImg =
-    image ||
+    img ||
     'https://images.unsplash.com/photo-1570537548284-360874d866b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGZhaXJ5fGVufDB8MHwwfHx8Mg%3D%3D'
 
   const values = [habitat_name, superpower, defaultImg]
