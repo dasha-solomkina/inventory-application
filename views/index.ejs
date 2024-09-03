@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header><h1>Habitats</h1></header>
+
+    <nav>
+      <a href="/new">
+        <button>new creature</button>
+      </a>
+      <a href="/new-habitat">
+        <button>new habitat</button>
+      </a>
+    </nav>
+
+    <div class="grid-cards">
+      <% habitats.forEach((habitat) => { %>
+
+      <div class="card habitat">
+        <img src="<%= habitat.img  %>" alt="<%= habitat.habitat_name %>" />
+        <a href="/<%= habitat.id  %>"><h2><%= habitat.habitat_name %></h2></a>
+        <p><%= habitat.superpower %></p>
+        <form
+          action="/<%= habitat.id %>/delete"
+          method="POST"
+          style="display: inline"
+        >
+          <button
+            type="submit"
+            onclick="return confirm('Deleting a habitat will also remove all creatures associated with it. Are you sure you want to proceed?');"
+          >
+            delete
+          </button>
+        </form>
+      </div>
+
+      <% }) %>
+    </div>
+  </body>
+</html>

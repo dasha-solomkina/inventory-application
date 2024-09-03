@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>New creature</title>
+  </head>
+  <body>
+    <header><h1>Create a new creature</h1></header>
+
+    <nav><a href="/">go home</a></nav>
+    <div class="form-container">
+      <form action="/new" method="post">
+        <label for="habitat_id">
+          Habitat name
+          <select name="habitat_id" type="text" id="habitat_id">
+            <% habitats.forEach((habitat) => { %>
+            <option value="<%= habitat.id %>">
+              <%= habitat.habitat_name %>
+            </option>
+            <% }) %>
+          </select>
+          <!-- change later for picker -->
+        </label>
+        <label for="name">
+          Name:
+          <input type="text" name="name" id="name" required />
+        </label>
+        <label for="nickname">
+          Nickname:
+          <input type="text" name="nickname" id="nickname" required />
+        </label>
+        <label for="class_name">
+          Class:
+          <input type="text" name="class_name" id="class_name" />
+          <!-- change later for picker -->
+        </label>
+        <label for="speed">
+          Speed:
+          <input type="number" name="speed" id="speed" min="10" max="9999" />
+        </label>
+        <label for="max_weight">
+          Max weight:
+          <input
+            type="number"
+            name="max_weight"
+            id="max_weight"
+            min="10"
+            max="9999"
+          />
+        </label>
+        <label for="lifespan">
+          Lifespan:
+          <input
+            type="number"
+            name="lifespan"
+            id="lifespan"
+            min="10"
+            max="9999"
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

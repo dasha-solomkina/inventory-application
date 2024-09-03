@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>New habitat</title>
+  </head>
+  <body>
+    <header><h1>Create a new habitat</h1></header>
+
+    <nav><a href="/">go home</a></nav>
+    <div class="form-container">
+      <form action="/new-habitat" method="post">
+        <label for="habitat_name">
+          Habitat name:
+          <input name="habitat_name" type="text" required />
+        </label>
+        <label for="superpower">
+          Superpower:
+          <input type="text" name="superpower" id="superpower" required />
+        </label>
+        <label for="img">
+          Image:
+          <input type="text" name="img" id="img" />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
