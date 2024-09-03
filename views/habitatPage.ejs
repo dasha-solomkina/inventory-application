@@ -21,14 +21,17 @@
       <div class="card creature">
         <img src="<%= creature.img %>" alt="<%= creature.name %>" />
         <h2><%= creature.name %></h2>
-        <p><%= creature.class_name %></p>
-        <p><%= creature.speed %></p>
-        <p><%= creature.max_weight %></p>
-        <p><%= creature.lifespan %></p>
+        <p class="characteristic" data-unit="class">
+          <%= creature.class_name %>
+        </p>
+        <p class="characteristic" data-unit="km/h"><%= creature.speed %></p>
+        <p class="characteristic" data-unit="kg"><%= creature.max_weight %></p>
+        <p class="characteristic" data-unit="years"><%= creature.lifespan %></p>
         <form
           action="/creature/<%= creature.id %>/delete"
           method="POST"
           style="display: inline"
+          class="delete"
         >
           <button
             type="submit"

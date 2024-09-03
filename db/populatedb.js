@@ -34,19 +34,18 @@ CREATE TABLE IF NOT EXISTS creatures (
 
 INSERT INTO creatures (name, nickname, class_name, speed, max_weight, lifespan, habitat_id, img)
 VALUES 
-  ('Smaug', 'Sm', 'Dragon', 80, 5000, 1000, 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Friedrich-Johann-Justin-Bertuch_Mythical-Creature-Dragon_1806.jpg/300px-Friedrich-Johann-Justin-Bertuch_Mythical-Creature-Dragon_1806.jpg'),
-  ('Draco', 'Dr', 'Dragon', 80, 5000, 1000, 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Chinese_dragon_asset_heraldry.svg/330px-Chinese_dragon_asset_heraldry.svg.png'),
-  ('Silvermane', 'Sil', 'Unicorn', 50, 1200, 500, 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Oftheunicorn.jpg/220px-Oftheunicorn.jpg'),
-  ('Luna', 'Lu', 'Unicorn', 50, 1200, 500, 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/DomenichinounicornPalFarnese.jpg/330px-DomenichinounicornPalFarnese.jpg'),
-  ('Fawkes', 'Faw', 'Phoenix', 200, 100, 500, 2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Phoenix_%281583%29.svg/330px-Phoenix_%281583%29.svg.png'),
-  ('Inferno', 'Inf', 'Phoenix', 200, 100, 500, 2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Phoenix-Fabelwesen.jpg/220px-Phoenix-Fabelwesen.jpg'),
-  ('Griff', 'Gr', 'Griffin', 100, 1500, 300, 2, 'https://media.mythopedia.com/1lIW08IDTwCm9M1Ts0fp75/281227928a0802deeaac2cbdfbb9b504/griffioen-antonio-tempesta-ca-1650.jpg'),
-  ('Aquila', 'Aq', 'Griffin', 100, 1500, 300, 2, 'https://miro.medium.com/v2/resize:fit:1089/1*D4wX807zD8aJwRLtNEKGvQ.jpeg'),
-  ('Mira', 'Mir', 'Mermaid', 25, 300, 200, 3, 'https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/1600px-072_Ramakien_Murals_%289150815520%29.jpg?itok=Gn2rC1dD'),
-  ('Sirena', 'Sir', 'Mermaid', 25, 300, 200, 3, 'https://ancworlds.wordpress.com/wp-content/uploads/2017/12/three_sirens_from_the_ballet_comique_de_la_reine.jpg'),
-  ('Domovoi', 'Lev', 'Progenitor', 25, 300, 200, 3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUP2CoIcW4oCPq2m8H0s5mNKJbdyb21I_5Ow&s'),
-  ('Nereus', 'Ner', 'Bird', 25, 300, 200, 3, 'https://i0.wp.com/www.ancient-origins.net/sites/default/files/field/image/Viktor-Vasnetsov.jpg');
-
+  ('Smaug', 'Sm', 'Dragon', 80, 5000, 1000, 1, 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Friedrich-Johann-Justin-Bertuch_Mythical-Creature-Dragon_1806.jpg'),
+('Draco', 'Dr', 'Dragon', 80, 5000, 1000, 1, 'https://upload.wikimedia.org/wikipedia/commons/2/24/Chinese_dragon_asset_heraldry.svg'),
+('Silvermane', 'Sil', 'Unicorn', 50, 1200, 500, 1, 'https://upload.wikimedia.org/wikipedia/commons/7/70/Oftheunicorn.jpg'),
+('Luna', 'Lu', 'Unicorn', 50, 1200, 500, 1, 'https://upload.wikimedia.org/wikipedia/commons/8/82/DomenichinounicornPalFarnese.jpg'),
+('Fawkes', 'Faw', 'Phoenix', 200, 100, 500, 2, 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Phoenix_%281583%29.svg'),
+('Inferno', 'Inf', 'Phoenix', 200, 100, 500, 2, 'https://upload.wikimedia.org/wikipedia/commons/4/43/Phoenix-Fabelwesen.jpg'),
+('Griff', 'Gr', 'Griffin', 100, 1500, 300, 2, 'https://media.mythopedia.com/1lIW08IDTwCm9M1Ts0fp75/281227928a0802deeaac2cbdfbb9b504/griffioen-antonio-tempesta-ca-1650.jpg'),
+('Aquila', 'Aq', 'Griffin', 100, 1500, 300, 2, 'https://miro.medium.com/v2/resize:fit:1089/1*D4wX807zD8aJwRLtNEKGvQ.jpeg'),
+('Mira', 'Mir', 'Mermaid', 25, 300, 200, 3, 'https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/1600px-072_Ramakien_Murals_%289150815520%29.jpg?itok=Gn2rC1dD'),
+('Sirena', 'Sir', 'Mermaid', 25, 300, 200, 3, 'https://ancworlds.wordpress.com/wp-content/uploads/2017/12/three_sirens_from_the_ballet_comique_de_la_reine.jpg'),
+('Domovoi', 'Lev', 'Progenitor', 25, 300, 200, 3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUP2CoIcW4oCPq2m8H0s5mNKJbdyb21I_5Ow&s'),
+('Nereus', 'Ner', 'Bird', 25, 300, 200, 3, 'https://i0.wp.com/www.ancient-origins.net/sites/default/files/field/image/Viktor-Vasnetsov.jpg');
 `
 
 async function main() {

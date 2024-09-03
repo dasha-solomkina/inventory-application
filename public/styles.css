@@ -6,7 +6,6 @@
 body {
   padding: 3%;
   background-color: #2a2a72;
-  color: #f8f8ff;
 }
 
 /* Header */
@@ -15,6 +14,11 @@ header,
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
 }
 
 /* Cards */
@@ -39,9 +43,8 @@ header,
 }
 
 .superpower {
-  /* color: rgb(97, 97, 97); */
   color: rgb(134, 134, 134);
-
+  margin-left: 10px;
   font-size: 14px;
 }
 
@@ -53,6 +56,7 @@ header,
 
 .delete {
   align-self: self-end;
+  margin-top: -10px;
 }
 
 /* navigation */
@@ -64,7 +68,7 @@ nav {
 
 button,
 #go-home {
-  background: linear-gradient(45deg, #6a82fb, #fc5c7d); /* Gradient color */
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -74,18 +78,14 @@ button,
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease;
 }
 
 button:hover,
 #go-home:hover {
-  background: linear-gradient(
-    45deg,
-    #fc5c7d,
-    #6a82fb
-  ); /* Reverse gradient on hover */
+  background: linear-gradient(45deg, #fc5c7d, #6a82fb);
 }
 
 a {
@@ -97,7 +97,7 @@ a {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   margin: auto;
 }
@@ -114,21 +114,52 @@ select {
   box-sizing: border-box;
 }
 
-input[type='submit'] {
-  background-color: #6a82fb; /* Same as button background */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
+select {
   cursor: pointer;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="%23333" stroke-width="2" d="M1 3l4 4 4-4"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
 
-input[type='submit']:hover {
-  background-color: #fc5c7d; /* Same as button hover */
+select option {
+  background-color: #ffffff;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
 img {
+  width: 100%;
   align-self: center;
-  max-width: 100%;
+  max-width: 500px;
+  max-height: 400px;
   margin-bottom: auto;
+}
+
+.required {
+  color: red;
+}
+
+.card .characteristic {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.card .characteristic::after {
+  content: attr(data-unit);
+  opacity: 0.6;
+  font-size: 14px;
+  margin-left: 3px;
 }

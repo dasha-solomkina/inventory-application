@@ -9,7 +9,7 @@
   <body>
     <header><h1>Create a new creature</h1></header>
 
-    <nav><a href="/">go home</a></nav>
+    <nav><a href="/" id="go-home">go home</a></nav>
     <form action="/new" method="post" id="creature-form">
       <label for="habitat_id">
         Habitat name:
@@ -19,11 +19,13 @@
           <% }) %>
         </select>
       </label>
-      <label for="name">
+      <label for="name"
+        ><span class="required">*</span>
         Name:
         <input type="text" name="name" id="name" required />
       </label>
-      <label for="nickname">
+      <label for="nickname"
+        ><span class="required">*</span>
         Nickname:
         <input type="text" name="nickname" id="nickname" required />
       </label>

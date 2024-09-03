@@ -9,13 +9,15 @@
   <body>
     <header><h1>Create a new habitat</h1></header>
 
-    <nav><a href="/">go home</a></nav>
+    <nav><a href="/" id="go-home">go home</a></nav>
     <form action="/new-habitat" method="post" id="habitat-form">
       <label for="habitat_name">
+        <span class="required">*</span>
         Habitat name:
         <input name="habitat_name" type="text" required />
       </label>
       <label for="superpower">
+        <span class="required">*</span>
         Superpower:
         <input type="text" name="superpower" id="superpower" required />
       </label>
