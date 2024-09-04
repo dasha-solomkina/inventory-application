@@ -9,3 +9,4 @@ module.exports = new Pool({
   password: process.env.DATABASE_PASSWORD,
   port: process.env.DATABASE_PORT,
 })
+// updated the env file
