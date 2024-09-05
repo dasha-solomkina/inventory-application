@@ -95,8 +95,6 @@ async function deleteAllCreaturesInHabitat(habitatId) {
 }
 
 async function deleteHabitatById(id) {
-  // check if there are any creatures, -->  delete creatures
-
   await pool.query(
     `
     DELETE FROM  habitats

@@ -3,10 +3,8 @@ require('dotenv').config()
 const { Pool } = require('pg')
 
 module.exports = new Pool({
-  host: process.env.DATABASE_HOST,
-  user: process.env.USER,
-  database: process.env.DATABASE_NAME,
-  password: process.env.DATABASE_PASSWORD,
-  port: process.env.DATABASE_PORT,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for Railway's SSL configuration
+  },
 })
-// updated the env file
