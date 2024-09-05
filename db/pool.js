@@ -3,9 +3,8 @@ require('dotenv').config()
 const { Pool } = require('pg')
 
 module.exports = new Pool({
-  host: 'meticulous-empathy.railway.internal',
-  user: 'postgres',
-  database: 'railway',
-  password: 'rGLsYgqbNOpVGPluWMDNxaNdFjigfHrt',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for Railway's SSL configuration
+  },
 })
