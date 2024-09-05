@@ -4,6 +4,8 @@ const indexRouter = require('./routes/index')
 const path = require('path')
 const assetsPath = path.join(__dirname, 'public')
 
+console.log('app')
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }))

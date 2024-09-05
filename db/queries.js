@@ -1,4 +1,5 @@
 const pool = require('./pool')
+console.log('queries')
 
 async function getAllHabitats() {
   const { rows } = await pool.query('SELECT * FROM habitats')

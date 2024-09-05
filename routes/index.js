@@ -1,4 +1,6 @@
 const { Router } = require('express')
+console.log('router')
+
 const indexRouter = Router()
 const habitatController = require('../controllers/habitatControllers')
 
