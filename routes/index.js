@@ -4,8 +4,7 @@ console.log('router')
 const indexRouter = Router()
 const habitatController = require('../controllers/habitatControllers')
 
-indexRouter.get('/', habitatController.renderTest)
-// indexRouter.get('/', habitatController.getHabitats)
+indexRouter.get('/', habitatController.getHabitats)
 indexRouter.get('/new-habitat', habitatController.createHabitatGet)
 indexRouter.post('/new-habitat', habitatController.createHabitatPost)
 

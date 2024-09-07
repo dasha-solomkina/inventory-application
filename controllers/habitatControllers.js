@@ -10,14 +10,6 @@ async function getHabitats(req, res) {
   }
 }
 
-async function renderTest(req, res) {
-  try {
-    res.render('testPage')
-  } catch (error) {
-    res.status(500).send('Server error')
-  }
-}
-
 async function getCreatures(req, res) {
   try {
     const habitatId = req.params.id
