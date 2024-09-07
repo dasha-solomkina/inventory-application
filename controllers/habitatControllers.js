@@ -103,5 +103,4 @@ module.exports = {
   createHabitatPost,
   deleteCreature,
   deleteHabitat,
-  renderTest,
 }
