@@ -49,6 +49,3 @@ yarn dev
 
 5. **Open your browser** and navigate to http://localhost:3000 to see the project in action.
 
-## Live project
-
-You can access the [live project here](https://inventory-application-production-130e.up.railway.app/).
